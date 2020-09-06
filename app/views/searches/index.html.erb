@@ -1,4 +1,4 @@
-<% if @search_model == "user" %>
+<% if @model == "user" %>
   <% if @users.present? %>
     <table class="table table-sm user-index">
       <h2>Users search for "#{word}"</h2>
@@ -19,11 +19,11 @@
     </table>
   <% else %>
     該当のユーザーはいません
-  <% end%>
-<% else %>
+  <% end %>
+<% elsif @model == "book" %>
   <% if @books.present? %>
     <table class="table book-index">
-      <h2>Books search for "#{word}"</h2>
+      <h2>Books search for "#{:word}"</h2>
       <thead>
         <th></th>
         <th>Title</th>
@@ -45,5 +45,5 @@
     </table>
   <% else %>
     該当の本はありません
-  <% end%>
+  <% end %>
 <% end %>

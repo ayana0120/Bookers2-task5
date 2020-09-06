@@ -20,7 +20,6 @@ Rails.application.routes.draw do
     resources :book_comments, only: [:create, :destroy]
   end
 
-  get "search" => "searches#search"
-  resources :searches, only: [:index]
+  get "searches" => "searches#index"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

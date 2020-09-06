@@ -20,17 +20,17 @@ class User < ApplicationRecord
     passive_relationships.where(following_id: user.id).exists?
   end
 
-  def self.search(search,word)
-    if search == "partical"
-      @user = User.where("name LIKE?", "%#{content}%")
-    elsif search == "forward"
-      @user = User.where("name LIKE?", "#{content}%")
-    elsif search == "backward"
-      @user = User.where("name LIKE?", "%#{content}")
-    elsif serch == "match"
-      @user = User.where("#{[word]}")
-    else
-      @user = User.all
+  def User.search(how, word, model)
+    if model == "user"
+      if how == "partical"
+        User.where("name LIKE?", "%#{word}%")
+      elsif how == "forward"
+        User.where("name LIKE?", "#{word}%")
+      elsif how == "backward"
+        User.where("name LIKE?", "%#{word}")
+      elsif how == "match"
+        User.where("#{word}")
+      end
     end
   end
 end

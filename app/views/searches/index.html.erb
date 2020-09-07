@@ -1,7 +1,7 @@
 <% if @model == "user" %>
   <% if @users.present? %>
     <table class="table table-sm user-index">
-      <h2>Users search for "#{word}"</h2>
+      <h2>Users search for " <%= params[:search] %> "</h2>
       <thead>
         <th>image</th>
         <th>name</th>
@@ -23,7 +23,7 @@
 <% elsif @model == "book" %>
   <% if @books.present? %>
     <table class="table book-index">
-      <h2>Books search for "#{:word}"</h2>
+      <h2>Books search for " <%= params[:search] %> "</h2>
       <thead>
         <th></th>
         <th>Title</th>

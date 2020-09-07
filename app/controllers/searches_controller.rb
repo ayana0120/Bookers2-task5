@@ -1,5 +1,5 @@
 class SearchesController < ApplicationController
-  def index
+  def search
   	@model = params[:model]
     @how = params[:how]
 

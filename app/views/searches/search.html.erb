@@ -18,8 +18,9 @@
       </tbody>
     </table>
   <% else %>
-    該当のユーザーはいません
-  <% end %>
+    <h2>Users search for " <%= params[:search] %> "</h2>
+      ・該当のユーザーはいません
+    <% end %>
 <% elsif @model == "book" %>
   <% if @books.present? %>
     <table class="table book-index">
@@ -44,6 +45,7 @@
       </tbody>
     </table>
   <% else %>
-    該当の本はありません
+  <h2>Books search for " <%= params[:search] %> "</h2>
+    ・該当の本はありません
   <% end %>
 <% end %>

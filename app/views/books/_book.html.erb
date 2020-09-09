@@ -1,12 +1,15 @@
-<h2>New book</h2>
 <%= form_for(book) do |f| %>
-  <div class="form-group">
-    <label for="item_コメント">Title</label>
-    <input type="text" class="form-control" name="book[title]" id="title">
+  <div class="form-title row">
+    <%= f.label :Title %>
+    <%= f.text_field :title, class: "col-xs-12" %>
   </div>
-  <div class="form-group">
-    <label for="comment">Title</label>
-    <textarea class="form-control" name="book[body]" id="opinion"></textarea>
+
+  <div class="form-body row">
+  	<%= f.label :Opinion %>
+    <%= f.text_area :body, class: "col-xs-12" %>
   </div>
-  <input type="submit" class="btn btn-primary btn-block" value="Create Book">
+
+  <div class="actions row">
+    <%= f.submit class: "btn btn-primary col-xs-12" %>
+  </div>
 <% end %>

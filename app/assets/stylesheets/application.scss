@@ -30,7 +30,7 @@ clearfix::after {
   font-size: 20px;
 }
 .body {
-  margin: 55px 10% 0px 6%;
+  margin: 55px 10% 0px 8%;
 }
 
 .notice, .complete {
@@ -39,7 +39,9 @@ clearfix::after {
 .error {
   color: red;
 }
-
+.actions {
+  margin-top: 5px;
+}
 .search-box{
   margin-top: 70px;
   text-align: center;

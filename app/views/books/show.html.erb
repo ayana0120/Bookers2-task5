@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <%= render 'books/error', model: @book, model: @book_comment %>
+    <%= render 'books/error', model: @book_comment %>
     <div class="col-xs-3">
       <%= render 'users/user', user: @user %>
       <h2>New book</h2>
@@ -38,8 +38,8 @@
             <% end %>
           </td>
         </tr>
-      </table>
       <% end %>
+      </table>
       <%= form_for [@book, @book_comment] do |f| %>
         <%= f.text_area :comment, rows:'5', class: "form-control" %>
         <%= f.submit "  送信  " %>
